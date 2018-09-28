@@ -1,0 +1,55 @@
+body {
+    overflow-x: hidden;
+}
+
+img {
+    /* display: none; */
+
+    transition: 1s;
+    
+    transform-origin: top center;
+    animation: slide 1s infinite;
+}
+
+div:hover img {
+    display: block;
+    /* animation: highlights 1s forwards; */
+}
+
+img:hover {
+    /* opacity: 0.25; */
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        }
+
+    50% {
+        transform: translate(300%, 50%) rotate(90deg);
+    }
+
+    100% {
+        transform: translate(100%, 37%) rotate(-90deg);
+    }
+}
+
+@keyframes open-menu {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(100%);
+    }
+}
+
+@keyframes highlights {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.05, 1.05);
+    }
+}
